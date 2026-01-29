@@ -1,0 +1,129 @@
+{
+	"name": "Json1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azureblob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "api_data.json",
+				"container": "source"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"results": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"user": {
+								"type": "object",
+								"properties": {
+									"gender": {
+										"type": "string"
+									},
+									"name": {
+										"type": "object",
+										"properties": {
+											"title": {
+												"type": "string"
+											},
+											"first": {
+												"type": "string"
+											},
+											"last": {
+												"type": "string"
+											}
+										}
+									},
+									"location": {
+										"type": "object",
+										"properties": {
+											"street": {
+												"type": "string"
+											},
+											"city": {
+												"type": "string"
+											},
+											"state": {
+												"type": "string"
+											},
+											"zip": {
+												"type": "integer"
+											}
+										}
+									},
+									"email": {
+										"type": "string"
+									},
+									"username": {
+										"type": "string"
+									},
+									"password": {
+										"type": "string"
+									},
+									"salt": {
+										"type": "string"
+									},
+									"md5": {
+										"type": "string"
+									},
+									"sha1": {
+										"type": "string"
+									},
+									"sha256": {
+										"type": "string"
+									},
+									"registered": {
+										"type": "integer"
+									},
+									"dob": {
+										"type": "integer"
+									},
+									"phone": {
+										"type": "string"
+									},
+									"cell": {
+										"type": "string"
+									},
+									"TFN": {
+										"type": "string"
+									},
+									"picture": {
+										"type": "object",
+										"properties": {
+											"large": {
+												"type": "string"
+											},
+											"medium": {
+												"type": "string"
+											},
+											"thumbnail": {
+												"type": "string"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"nationality": {
+					"type": "string"
+				},
+				"seed": {
+					"type": "string"
+				},
+				"version": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
